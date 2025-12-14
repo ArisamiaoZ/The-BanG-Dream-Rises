@@ -1,0 +1,108 @@
+﻿l_simp_chinese:
+
+##主角Tag
+ #“法兰西第一共和国”运动
+ #秘密军事组织
+ #法国国防政府 （原法兰西革命共和国政府）
+##革命失控导致全国彻底陷入革命乱波
+##啊！准会好，准会好，准会好，哪怕是有人去造反，一切都能成！
+############################
+###=====| 政治  |=====###
+############################
+
+###=====| a) 国家名字 |=====###
+##北法
+ GCF_collapse: "法国国防政府"
+ GCF_collapse_DEF: "法兰西革命共和国紧急政府"
+ PRY_collapse: "“法兰西第一共和国”运动"
+ PRY_collapse_DEF: "法兰西第一共和国"
+ PRY_collapse_ADJ: "法国"
+ FMM_collapse: "“奥尔良王朝”运动"
+ FMM_collapse_DEF: "法兰西王国"
+ FMM_collapse_ADJ: "法国"
+ NVA_collapse: "国家人民军维和部队"
+ NVA_collapse_DEF: "法国军管区"
+ NVA_collapse_ADJ: "德国"
+ BRG_collapse: "法兰西骑士团国"
+ BRG_collapse_DEF: "党卫军法兰西骑士团国"
+ BRG_collapse_ADJ: "勃艮第"
+ FGR_collapse: "革命法军北方战区"
+ FGR_collapse_DEF: "法兰西临时政府"
+ FGR_collapse_ADJ: "法国"
+##波尔多
+ FRD_collapse: "波尔多国民议会"
+ FRD_collapse_DEF: "法兰西共和国"
+ FRD_collapse_ADJ: "法国"
+ FIT_collapse: "革命法军南方战区"
+ FIT_collapse_DEF: "法兰西临时政府"
+ FIT_collapse_ADJ: "法国"
+##马赛和里昂
+ PIC_collapse: "法国革命军事政府"
+ PIC_collapse_DEF: "法兰西革命法军政府"
+ PIC_collapse_ADJ: "法国"
+ FRM_collapse: "秘密军事组织"
+ FRM_collapse_DEF: "法兰西国"
+ FRV_collapse: "法兰西公社"
+ FRV_collapse_DEF: "法兰西公社"
+
+
+###=====| 政党 |=====###
+
+ PIC_communist_party_MCH_long: "法国革命法军——总指挥部"
+ PIC_communist_party_MCH: "革命法军"
+ PRY_progressivism_party_collapse: "国民公会"
+ PRY_progressivism_party_collapse_long: "法兰西第一共和国国民公会"
+ FMM_progressivism_party_collapse: "奥尔良王朝"
+ FMM_progressivism_party_collapse_long: "法兰西王朝"
+ NVA_progressivism_party_collapse_long: "德国国家人民军军政府"
+ NVA_progressivism_party_collapse: "国家人民军"
+ FIT_progressivism_party_collapse_long: "法国革命法军——南方战区"
+ FIT_progressivism_party_collapse: "革命法军"
+ FGR_communist_party_collapse_long: "法国革命法军——北方战区"
+ FGR_communist_party_collapse: "革命法军"
+###############################
+###=====| 内阁 |=====###
+###############################
+
+###=====| a) 领导介绍 |=====###
+
+
+###=====| b) 内阁特质 |=====###
+
+###=====| c) 内阁名字 |=====###
+ PIC_MCH: "革命法军指挥部"
+ FMM_France_Henri_VII: "亨利七世"
+ PRY_Convention_nationale: "国民公会"
+ NVA_CN: "国家人民军军政府"
+ FIT_Portrait_Alain_de_Boissieu: "阿兰·德·布瓦西厄"
+ FGR_Portrait_Edmond_Jouhaud: "埃德蒙·儒奥"
+ PIC_Portrait_Francois_Maurin: "佛郎瓦索·莫兰"
+
+##########################
+###=====| 国家精神  |=====###
+##########################
+ GCF_collapse_gone: "法国内战"
+ GCF_collapse_gone_desc: "亲爱的法兰西\n我童年时亲爱的祖国\n无忧无虑轻轻地摇晃\n我把你呵护在心里"
+###########################
+###=====| 事件 |=====###
+###########################
+
+ WORLD_DSR.21.t: "[Get_newspaper_header]法国发生军事政变！"
+ WORLD_DSR.21.desc: "大火，你马上就要升起了！"
+ WORLD_DSR.21.a: "万岁！炮火倾泄喷涌！"
+
+ WORLD_DSR.22.t: "[Get_newspaper_header]法国崩溃！"
+ WORLD_DSR.22.desc: "震惊、恐惧，火药桶被爆炸了，法兰西遍体鳞伤。不堪雅各宾派的激进统治，革命法军将领佛郎瓦索·莫兰发动了军事政变。多年的紧张同势最终倒向了政府权威的全面崩溃，林林总总的异见者纷纷站出来反对这个国家：民主派在波尔多组建起临时议会，保王党们重聚布列塔尼，第一共和国的支持者在在鲁昂起义，马赛的革命者们走上街头宣布要发动一场新的革命，秘密军事组织的旧日阴影卷土重来。而造成这一切的佛郎瓦索·莫兰在局势彻底失控后逃往了里昂，在莫兰逃离后巴黎也重新回到了雅各宾派的统治下。德国占领了瓦隆地区并宣布不会过度干涉法兰西的内政。\n\n如今各路人马都宣称自己是法国的合法政府，全国各地的激斗也愈发频繁。法兰西发现自己似乎又一次陷于糟糕的境地，或许只有时间才能证明她是否会进一步滑向深渊。"
+ WORLD_DSR.22.a: "专制主义宣告断气，自由终将获得胜利！"
+
+############################
+###=====| 国策 |=====###
+############################
+
+##############################
+###=====| 决议 |=====###
+##############################
+
+##############################
+###=====| MECHANICS  |=====###
+##############################

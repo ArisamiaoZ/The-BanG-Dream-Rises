@@ -1,0 +1,193 @@
+﻿l_english:
+#Index; Search for these names using CTRL+F and you'll find the section they entitle.
+#  1) POLITICS
+#    a) Tag Name
+#    b) Parties
+#
+#  2) CHARACTERS
+#    a) Leader Bios
+#    b) Minister Bios
+#    c) Character Names
+#
+#  3) IDEAS
+#
+#  4) EVENTS
+#    a) Algerian Forts
+#
+#  5) FOCUSES
+#    a)
+#
+#  6) DECISIONS
+#    a)
+#
+#  7) MECHANICS
+#    a)
+#
+
+############################
+###=====| POLTICS  |=====###
+############################
+
+###=====| a) Tag Name |=====###
+
+ FLA:0 "French Algeria"
+ FLA_DEF:0 "Les Départements et Territoires d'Algerie"
+ FLA_ADJ:0 "Pied-Noir"
+ 
+###=====| b) Parties |=====###
+
+ FLA_fascism_party:0 "FLN"
+ FLA_fascism_party_long:0 "Front de Libération Nationale"
+ FLA_socialist_party:0 "MNA"
+ FLA_socialist_party_long:0 "Mouvement National Algérien"
+ FLA_despotism_party:0 "CSPA"
+ FLA_despotism_party_long:0 "Comité de Salut Publique d'Algérie"
+ FLA_conservatism_party:0 "ORP"
+ FLA_conservatism_party_long:0 "Organisation de la Résistance Populaire"
+ FLA_progressivism_party:0 "ORP"
+ FLA_progressivism_party_long:0 "Organisation de la Résistance Populaire"
+ FLA_paternalism_party:0 "FLN"
+ FLA_paternalism_party_long:0 "Jabhatu l-Taḥrīri l-Waṭanī"
+ FLA_ultranationalism_party:0 "OAS-A"
+ FLA_ultranationalism_party_long:0 "Organisation Armée Secrète-Algérie"
+ FLA_communist_party:0 "PCA"
+ FLA_communist_party_long:0 "Parti Communiste Algérien"
+ FLA_national_socialism_party:0 "Milice Française"
+ FLA_national_socialism_party_long:0 "Milice Française"
+
+###############################
+###=====| CHARACTERS  |=====###
+###############################
+
+###=====| a) Leader Bios |=====###
+
+ POLITICS_JEAN_JAQUES_SUSINI_DESC:0 "As the situation in Algeria continues to deteriorate following the Burgundian invasion of the French metropole, the defense of the Departments has fallen under the purview of the paramilitary OASA - the Algerian branch of the wider OAS. At the head of the OASA is Jean-Jaques Susini, a Pied-Noir of Corsican descent who helped co-found the group with Raoul Salan and others in order to counter what they perceived as the government's inability to check both the FLN and Italian meddling. While Salan continued to run the movement from his base in Marseilles, Susini and his comrade Pierre Lagaillarde were dispatched back to their birthplace of Algeria to ensure the organization's dominance in the Departments' administration.\n\nThe Pied-Noir population was instantly smitten with their self-proclaimed champions, viewing them as noble defenders of their birthright against FLN terrorists and Italian competition alike. It was the simplest thing in the world to leverage the trust of the settler population into governmental influence, especially after the Sétif and Guelma massacres destroyed any hope of native Algerian support, forcing the French to rely almost exclusively on the zealotry of men like Susini. Truthfully, the explosion of civil war in Algeria could not be more welcome. At last, the FLN have come out of hiding where they can be decisively crushed. Susini is determined to see the French dominance of Algeria reconfirmed - no matter the cost in lives."
+ POLITICS_ALAIN_DE_SERIGNY_DESC:0 "The role of Governor-General of the last French colony has not been an easy one for Alain de Sérigny. His prominent role in the media began in 1941 when he was made political director of the daily newspaper 'L'Écho d'Alger'. He managed his task ably, bringing the paper up to a circulation of about 40,000 readers in 1944. He also proved himself to be a loyal supporter of the new Vichy regime during the war, even receiving from them the prestigious Order of the Gallic Francisque.\n\nSérigny's paper continued to support the French State after the Second World War's conclusion, becoming its most valuable public relations mouthpiece in the Algerian territory, the only colony France was allowed to retain after the War's end. Given his staunch support for the Pied-Noir settler class in Algeria and his influence in the region, he was tapped as its new Governor-General - an unorthodox choice to say the least. In the years since his appointment the man known as "the barometer of Algiers" has been beset by difficulties. The resources the rump French State can provide are not enough to support security efforts across Algeria, meaning that only the coastal cities can be truly said to be fully under French rule. Sérigny has continued to turn ever more to the Pied-Noir paramilitary OASA for help.\n\nSérigny has become adrift in a sea that is largely of his own creation: the OASA views him as too passive against the growing FLN insurgency while the natives despise him for the atrocities carried out under his authority at Sétif and Guelma. In the end Sérigny can do little but watch as events slip further and further out of his control."
+
+###=====| b) Minister Bios |=====###
+
+###=====| c) Character Names |=====###
+
+ FLA_Alain_de_Serigny:0 "Alain de Sérigny"
+ FLA_Jean_Jacques_Susini:0 "Jean-Jacques Susini"
+ FLA_Pierre_Lagaillarde:0 "Pierre Lagaillarde"
+ FLA_Henry_Niveau_de_Villedary:0 "Henry Niveau de Villedary"
+ FLA_Said_Boualam:0 "Saïd Boualam"
+ FLA_Robert_Martel:0 "Robert Martel"
+ FLA_Paul_Gardy:0 "Paul Gardy"
+ FLA_Marcel_Bigeard:0 "Marcel Bigeard"
+ FLA_Fernand_Gambiez:0 "Fernand Gambiez"
+ FLA_Jean_Marcel_Jeanneney:0 "Jean-Marcel Jeanneney"
+ FLA_Robert_Abdesselam:0 "Robert Abdesselam"
+ FLA_Jean_Robert_Thomazo:0 "Jean-Robert Thomazao"
+ FLA_Charles_Lacheroy:0 "Charles Lacheroy"
+ FLA_Ouali_Azem:0 "Ouali Azem"
+ FLA_Joseph_Ortiz:0 "Joseph Ortiz"
+ 
+ FLA_Marcel_Peyrouton:0 "Marcel Peyrouton"
+
+##########################
+###=====| IDEAS  |=====###
+##########################
+
+FLA_the_withered_colony:0 "The Withered Colony"
+FLA_the_withered_colony_desc:0 ""
+FLA_student_protests:0 "Student Protests"
+FLA_student_protests_desc:0 ""
+FLA_fln_insurgency:0 "FLN Insurgency"
+FLA_fln_insurgency_desc:0 ""
+FLA_resistance_revival:0 "Revived Resistance"
+
+###########################
+###=====| EVENTS  |=====###
+###########################
+
+###=====| a) Algerian Forts |=====###
+
+ FRA_ALGERIAN_FORTS.1.t: "Briefing on the Algerian Situation"
+ FRA_ALGERIAN_FORTS.1.desc: "M. le Président.\n\nYou have recently chosen to recognize the Comité de Salut Public de l'Algérie's government: while this is a wise decision, as they are surely nothing but well-intentioned patriots, I must nonetheless inform you of what is necessary in order to pursue a thorough and beneficial cooperation with them.\n\nAs it stands, Algeria is, to put it bluntly, a mess. The economy is in the gutter, being overly controlled by the Grands Colons, the remnants of Pied-Noirs colonial landowning elites. Their fortification lines are close to non-existent, and despite what they assure us of, there are lingering suspicions that the Front de Libération Nationale, the main Algerian nationalist group, was not successfully eradicated, and has instead gone into hiding, ready to strike another day. So catastrophic is the situation, in fact, that a growing number of Pied-noirs inhabitants are turning towards the Résistance, who apparently still survive in Algeria.\n\nThose three main points are the biggest hurdles we will have to deal with in order to safeguard our hold over Algeria. As such, I have drafted a three-point program in order to make it once again a fully integral and integrated part of France:\n1. Pursue a program of economic investment, in order to make Algeria's economy up and running again.\n2. Build fortification lines all over Algeria, to prepare the army in the event of an eventual rebel uprising.\n3. Safeguard the CSPA's position through propaganda, military and political help.\nI am at your disposal for any further questions, and I am disposed to carry out the plan myself should you authorize me to.\n\nPierre Pucheu, Ministre des Finances de de l'Économie Nationale"
+ FRA_ALGERIAN_FORTS.1.a: "Forward this to Bouthillier, he'll know what to do."
+
+ FRA_ALGERIAN_FORTS.2.t: "Chômage Technique"
+ FRA_ALGERIAN_FORTS.2.desc: ""I draft a plan, a comprehensive and thorough plan, and he just forwards the whole thing to Bouthillier!\n\n"At least you were involved in the discussion! Nobody called me up, and I used to be governor of Algeria, remember?"\n\nPierre Pucheu and Marcel Peyrouton's caustic discussion may have gotten a chuckle from the former, but Peyrouton's unenthusiastic face called him back to reality. Even in one of Paris' finest restaurants, it seemed that the atmosphere could sometimes be morose.\n\n"Well, don't get too angry over it, Marcel."\n\nPucheu empathetically said. "It's just what Bouthillier does, micromanaging everything. And as for Tixier, well... He's not a foreign affairs man, I suppose."\n\n"It doesn't change the fact that we're nothing but glorified subordinates to him, Pierre!" Peyrouton angrily answered while taking a bite from his mushroom omelette. "He could at least pretend to care about our opinion, before putting us out of a job, don't you think?"\n\n"You're being too harsh. Too harsh on ourselves, and too harsh on him." Pucheu calmly answered. "To be quite honest, as long as the work gets done, I don't really mind who's in charge of it. And besides," he added with a small chuckle, "I'd much rather have him do too much than too little.""
+ FRA_ALGERIAN_FORTS.2.a: ""Well, we can only hope he does the job well.""
+
+ FRA_ALGERIAN_FORTS.3.t: "An Algerian Vacation"
+ FRA_ALGERIAN_FORTS.3.desc: "Alright, let's see... If the oil wells go through here, we can build more efficient fortifications there, which means that, hmmm... No, no, that wouldn't work, Bouthillier thought. They couldn't go through there, the OASA wouldn't accept it. Which meant that.. Oh, of course! Why didn't he think about this sooner? Hastily scribbling notes on a blank sheet, Yves Bouthillier's mind raced, as it usually did, while working on the Algerian situation. A very interesting conundrum, that one.\n\nPucheu's initial briefing was somewhat complete, but he had failed to take into account that resources were very, um... limited. The OASA may have been "well-intentioned patriots", but they were only useful as far as they served as a substitute for the army itself, allowing the mainland to spare some resources for its own use. Investments in the economy and fortifications were sorely needed, but they could be made insofar as the mainland's own economy allowed it.\n\n"M. Bouthillier?" His secretary chimed him from the room adjacent to his office. "Someone called. One, uh, Jeanneney. He said he was the economy minister in the CSPA. Said he wanted you to come to Algiers, to meet you."\n\nAn Algerian vacation didn't sound so bad, all things considered. That'd allow him to see what this Jeanneney fellow was worth, and especially to take a breath of fresh air. It wouldn't keep him from working, though. After all, Algeria was going to be rebuilt in a day, whatever the Pieds-Noirs may have thought"
+ FRA_ALGERIAN_FORTS.3.a: ""When's the next plane to Algiers?""
+
+ FRA_ALGERIAN_FORTS.4.t: "Bouthillier and the Bowtie"
+ FRA_ALGERIAN_FORTS.4.desc: ""M. le Premier Ministre. I trust your trip went well?"\n\n"Nothing short of pleasant, Mr. Jeanneney." Bouthillier answered, somewhat curtly, as he shook the economist's hand. "But let's get down to business, shall we? I trust you have a briefing prepared."\n\n"Of course, yes." Jeanneney answered. Searching through his papers for an unusually long amount of time, he finally pulled a thick, beige file, and slammed it on the table.\n\n"Here is everything I have. Now, the main problem in Algeria's economy is the excessive influence of the Grands Colons. Those rich Pieds-Noirs landowners refuse to redistribute their lands to smaller farmers, and their monopoly kills what few remains of Algeria's economic vitality. Additionally," he shifted uncomfortably in his seat, "their... harsh conduct towards the natives is not good for us, as it vindicates the FLN's rhetoric about Pieds-Noirs, and sends them in droves into the rebels' arms."\n\n"I didn't think you'd be a humanitarian, Mr. Jeanneney!" Bouthillier scoffed. "Nonetheless, I get your concerns. And I suppose nothing can be done because the Grands Colons have the full and entire might of the OASA behind them, correct?"\n\n"Precisely."`\n\nSilently, Bouthillier grabbed a nearby pen, and started drafting plans on the back of one of Jeanneney's pages. And for hours on end, the two men discussed, and argued, until the day was no more, for Algeria's economy could not wait a minute longer."
+ FRA_ALGERIAN_FORTS.4.a: "A fruitful meeting."
+
+ FRA_ALGERIAN_FORTS.5.t: "A Snowball in the Desert"
+ FRA_ALGERIAN_FORTS.5.desc: "Farid's walk home from the Algiers University used to be somewhat quiet, reserved and thoughtful as he was. And yet, these days, things had taken a turn for the worst."Hey, asshole! Your kind is not welcome here!"\n\nFarid's brisk walk hastened, as he tried his best to ignore the boys' jeers behind him. Such occurrences had become depressingly common as of late: not that life had ever been pleasant, however.\n\n"Look at him go!" A second, slimmer boy, who seemed even more vicious than the first, threw a rock at him, barely missing the Algerian's head. His friend quickly followed suit, as a flurry of projectiles forced Farid to run away. He could hear the boys' laugh behind him, and all he could feel was shame. Shame, from being forced to run away from invaders in his very homeland. And yet, what could he do?\n\n"Yeah, and don't come back!"\n\nFarid snapped, and threw a rock back at the boys, before quickly running away. He could only hear the distant noise of a body collapsing to the ground, and of a subsequent horrified scream, as he fled as fast as he could. Farid, however, didn't care. If anything happened to the boy, he'd have gotten what was coming to him. And surprisingly enough, it felt good.\n\nThe young man had long thought about joining the FLN, but refrained from doing so because of their "excessive violence", seemingly content to remain a fellow traveler of their noble cause. This, however, was the last straw. He could not stand the thought of an Algeria in shackles, of a people enslaved by ungrateful brutes."
+ FRA_ALGERIAN_FORTS.5.a: "Not anymore."
+
+ FRA_ALGERIAN_FORTS.6.t: "Like a Moth to the Light"
+ FRA_ALGERIAN_FORTS.6.desc: "Jean-Pierre's walk home had been unusually quiet recently, and today was no exception. Something in the air made it seem stale, dead, carrying a perpetual feeling of tension, never to be resolved. Life in Algeria had once been beautiful, so how had it come to this?\n\nHow many more streets were going to be destroyed by the FLN's brutes? And how many more innocents would have to pay before these madmen would stop their rampage? This was a question Jean-Pierre often asked himself, as walked home through the ruined Rue des Oliviers, a once-beautiful marvel of French architecture who now was nothing more than a pile of rubble.\n\nKicking a small rock in a faint revolt against the chaos that surrounded him, he let out a deep sigh, and took a cigarette out of his pocket. The nicotine was the only thing keeping him alive these days, for better or for worse, and he figured many of Algiers' young, lost upstarts such as him were in a similar predicament. Something unusual, however, made him stop dead in his tracks: on the wall of an abandoned and destroyed building stood a few words, written in thick black paint.\n\n"OAS veille".\n\nThis was the solution to all of his woes, to all of Algeria's woes. The solution to destroyed buildings, to rubble-filled streets. The answer to what those airy-headed bureaucrats away in Paris called the "Algerian question." No more was Jean-Pierre going to wander around aimlessly, smoking cigarette after cigarette to forget. He couldn't simple stay idle."
+ FRA_ALGERIAN_FORTS.6.a: "Not anymore"
+
+ FRA_ALGERIAN_FORTS.7.t: "I Can Live With It"
+ FRA_ALGERIAN_FORTS.7.desc: "The office was silent, somehow even moreso than usual without the whispering scratch of the General's pen and the occasional turning page. Instead, with his work done but his clock running still, he was staring out the window into the rest of the compound, the heart of the French military presence in Algeria. The men marching along their patrols and drills outside the offices and the gloss of sweat on their faces made the General happy to be indoors. Even still, the heat within was a sickly, stagnant variety. The silence was broken by a careful, almost hesitant, knock at the door. "Come," Uttered the general, and a mousey aide slid inside at his command.\n\n"The report from the Air Force," Informed the aide, extending a stack of papers for the General to take. It was just another step in the dance he partook in with the rest of the military bureaucracy, trading papers and reports about nothing so they can be signed for permission to continue doing nothing until something catastrophically violent happens, so they can sign a few papers more. The aide left, and the General examined the communique. None of the contents surprised the General, just one long compilation of every little maneuver and action. One page did catch his eye, on the most significant operation of the week, the bombing of a village.The author of the report cited suspicion of FLN collaboration as cause.\n\nLogistic minutiae were the primary statistics on the page, with the hefty casualties relegated to what was effectively a footnote. He turned the page, looking for any kind of motive beyond a cryptic assertion of FLN loyalties in the village, but found nothing. A sickening uncertainty churned in his stomach. What if the village did nothing wrong? He trusted his men, surely they knew what they were doing. If they weren't, that would make them murderers. If they were murderers, what did that make him, after directing them for years of operations and no results? He shook his head and swore to himself, he didn't want to answer that question. He had to live with it somehow."
+ FRA_ALGERIAN_FORTS.7.a: "Right?"
+
+ FRA_ALGERIAN_FORTS.8.t: "Purpose"
+ FRA_ALGERIAN_FORTS.8.desc: "Algerian independence was a foreign idea to a young Algerian man named Karim, who had just entered university. He had never intended to fight for the freedom of his nation and its people. But things always find a way to take a turn. He'd met another man, Djamel, and after several months of yearning for more, dreaming of doing something greater, the two men had opted to enlist in the FLN.\n\nThey knew the dangers this commitment brought. Rigorous training had kept the men on their feet, stripping them of doubt that Algeria would see the light of independence. Their resolve to see a free Algeria was only strengthened, demonstrated by their efficiency in combat. "They are the best men I have," their commanding officer remarked.\n\nYet, in the desert one morning, as the sun barely peeked over the horizon, Karim was the first to see an object emerge in the sky as the two men led an attack on a base housing their enemies. The speck became sharper, and when Karim realized a jet was approaching, he yelled as loud as he could for his men to hit the deck. Seconds later, the earth shook, and Karim was flung back several feet.\n\nThere was only darkness at first. As his eyelids separated, he could feel tiny grains of sand blanketing his eyes. Ringing consumed his ears, and smoke attacked his nostrils as it burned his eyes. Looking to his right, Djamel was on the floor, a red liquid pouring out of his mouth, among other places. Karim wasted no time crawling over, leaning over his friend who twitched beneath him. Djamel reached out slowly to Karim, who gripped his hand and held it close.\n\n"My brother," Djamel whispered softly, causing Karim to lean in closer, "promise me one thing." Karim nodded, tears in his eyes as Djamel continued. "Promise me you will fight until Algeria is free.""
+ FRA_ALGERIAN_FORTS.8.a: ""I promise.""
+
+ FRA_ALGERIAN_FORTS.9.t: "Naming Names"
+ FRA_ALGERIAN_FORTS.9.desc: "The crow's feet on the French policeman's face creased with his eyes as he squinted down the line of Algerian townsfolk. The explosion half an hour ago had rallied the town like a clarion call, and the police had responded in kind. They had found their own station out a wall, with the rest scorched black or shabby and peeling. Not much could be found beyond the fallen wall apart from cinders, and the police would count themselves thankful that nobody had been inside. They had arrived with no less haste, with the chief already on the case, staring down the growing crowd while a handful of officers kept the group from surging forth. Driven by curiosity more than anything else, they were relatively civil, so there wasn't much blocking or shielding to do.\n\nMost faces in the crowd were familiar to the chief, albeit he'd never bothered to put names to them outside of repeat offenders. He counted those as well among the crowd, and was quick to pick out a scruffy young man known to distribute a separatist newsletter. "You there!" He barked, causing the man to turn around wide eyed, "Did you have anything to do with this, son?"\n\n"Sir, I've been at work all day," Replied the Algerian, his features relaxing.\n\n"Right, right," Said the officer, with lilting incredulity, "What about the rest of you?"\n\nThere wasn't much incentive to answer. A few people offered weak nods, but it wasn't enough for the policeman to do anything but sigh and call the name of another known troublemaker, who didn't even bother coming forward. A few moments later, the policeman spat on the ground and planted his hands on his hips. "Don't you all have some place to be? Get moving!" He ordered, with little force behind his voice. One by one the throng dissolved and the day continued as normal. The chief turned back to the ruins of his workplace, hunched down, and hefted the mailbox upright."
+ FRA_ALGERIAN_FORTS.9.a: "Gotta start somewhere."
+
+ FRA_ALGERIAN_FORTS.10.t: "Painful Reminders"
+ FRA_ALGERIAN_FORTS.10.desc: "The medic had told him not to walk on that leg for a few days, but Paul was doing it anyway. The air base was too empty for him. There were too many vacant bunks, the mess hall was too quiet and the infirmary was too crowded. For once he wanted a little noise, and as such he was headed for a local bar. He didn't have anything better to do until his leg healed, anyways. A base MP's no use if he has to limp everywhere. So he weathered the glares of the Algerian natives in the street on his way, wincing with every step.\n\nEach little stab was a reminder of yesterday, each one bringing up a little scrap of memory. The way he'd tumbled to the ground with a pain in his thigh and nothing in his ears. The way he'd watched the smoke climb lazily into the air from the site of the explosion, before he'd really realized what had happened. Unmoving bodies on the ground. Jean's sightless sky-bound gaze. The gut wrenching tearing sensation he'd felt in his leg as he scrambled to his feet. The call of his Sergeant not to pursue the fleeing FLN bomber. His refusal. His subsequent fall. The doctor ripping shrapnel out of his leg.\n\nBefore long he was in a bar he couldn't remember or care the name of. There were a few airmen and MPs drinking as well as natives with some bitter, unspoken agreement to sit on opposite sides of the room. Paul wished he could get further away, his hate for them growing almost nauseating. He sat down at the bar beside an old man and accepted a share of some cheap swill before beginning to make conversation. At a certain point, Paul raised a question. "Why won't they let us do something about the FLN? If we could just start shooting, we'd get a lot more done."\n\nThe man nodded, "Amen. Not like those suits on the mainland are going to let us, though." He stared at a crack in the wall for a few moments, then spoke again, "You ever considered joining up with the Milice? My brother's a recruiter. You could get some real work done." "
+ FRA_ALGERIAN_FORTS.10.a: ""Real work?""
+
+ FRA_ALGERIAN_FORTS.11.t: ""
+ FRA_ALGERIAN_FORTS.11.desc: "SUPPORTER TURNOUT: HIGH\nFLN ACTIVITY: NO ACTIVITY"
+ FRA_ALGERIAN_FORTS.11.a: ""
+
+ FRA_ALGERIAN_FORTS.12.t: ""
+ FRA_ALGERIAN_FORTS.12.desc: "SUPPORTER TURNOUT: OKAY\nFLN ACTIVITY: NO ACTIVITY"
+ FRA_ALGERIAN_FORTS.12.a: ""
+
+ FRA_ALGERIAN_FORTS.13.t: ""
+ FRA_ALGERIAN_FORTS.13.desc: "SUPPORTER TURNOUT: LOW\nFLN ACTIVITY: NO ACTIVITY"
+ FRA_ALGERIAN_FORTS.13.a: ""
+
+ FRA_ALGERIAN_FORTS.14.t: ""
+ FRA_ALGERIAN_FORTS.14.desc: "SUPPORTER TURNOUT: HIGH\nFLN ACTIVITY: MINOR"
+ FRA_ALGERIAN_FORTS.14.a: ""
+
+ FRA_ALGERIAN_FORTS.15.t: ""
+ FRA_ALGERIAN_FORTS.15.desc: "SUPPORTER TURNOUT: OKAY\nFLN ACTIVITY: MINOR"
+ FRA_ALGERIAN_FORTS.15.a: ""
+
+ FRA_ALGERIAN_FORTS.16.t: ""
+ FRA_ALGERIAN_FORTS.16.desc: "SUPPORTER TURNOUT: LOW\nFLN ACTIVITY: MINOR"
+ FRA_ALGERIAN_FORTS.16.a: ""
+
+ FRA_ALGERIAN_FORTS.17.t: ""
+ FRA_ALGERIAN_FORTS.17.desc: "SUPPORTER TURNOUT: HIGH\nFLN ACTIVITY: ATTACK"
+ FRA_ALGERIAN_FORTS.17.a: ""
+
+ FRA_ALGERIAN_FORTS.18.t: ""
+ FRA_ALGERIAN_FORTS.18.desc: "SUPPORTER TURNOUT: OKAY\nFLN ACTIVITY: ATTACK"
+ FRA_ALGERIAN_FORTS.18.a: ""
+
+ FRA_ALGERIAN_FORTS.19.t: ""
+ FRA_ALGERIAN_FORTS.19.desc: "SUPPORTER TURNOUT: LOW\nFLN ACTIVITY: ATTACK"
+ FRA_ALGERIAN_FORTS.19.a: ""
+
+############################
+###=====| FOCUSES  |=====###
+############################
+
+##############################
+###=====| DECISIONS  |=====###
+##############################
+
+##############################
+###=====| MECHANICS  |=====###
+##############################
