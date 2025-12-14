@@ -1,0 +1,75 @@
+# COVID
+JAP_mitake_ran_scheme = {
+	if = {
+		limit = {
+			has_idea = JAP_mitake_ran_scheme1
+		}
+		swap_ideas = {
+			remove_idea = JAP_mitake_ran_scheme1
+			add_idea = JAP_mitake_ran_scheme2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = JAP_mitake_ran_scheme2
+		}
+		swap_ideas = {
+			remove_idea = JAP_mitake_ran_scheme2
+			add_idea = JAP_mitake_ran_scheme3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = JAP_mitake_ran_scheme3
+		}
+		swap_ideas = {
+			remove_idea = JAP_mitake_ran_scheme3
+			add_idea = JAP_mitake_ran_scheme4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = JAP_mitake_ran_scheme4
+		}
+		swap_ideas = {
+			remove_idea = JAP_mitake_ran_scheme4
+			add_idea = JAP_mitake_ran_scheme5
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = JAP_mitake_ran_scheme1
+		}
+		swap_ideas = {
+			remove_idea = JAP_mitake_ran_scheme1
+			add_idea = JAP_mitake_ran_scheme6
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = JAP_mitake_ran_scheme1
+		}
+		swap_ideas = {
+			remove_idea = JAP_mitake_ran_scheme1
+			add_idea = JAP_mitake_ran_scheme7
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = JAP_mitake_ran_scheme6
+		}
+		swap_ideas = {
+			remove_idea = JAP_mitake_ran_scheme6
+			add_idea = JAP_mitake_ran_scheme3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = JAP_mitake_ran_scheme7
+		}
+		swap_ideas = {
+			remove_idea = JAP_mitake_ran_scheme7
+			add_idea = JAP_mitake_ran_scheme3
+		}
+	}
+}
