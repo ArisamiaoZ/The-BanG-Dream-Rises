@@ -38,9 +38,9 @@ bookmarks = {
 			history = "JAP_GATHERING_STORM_DESC"
 			ideology = conservative
 			ideas = {
+				JAP_naruhito
 				JAP_japanese_pacifism_idea
 				JAP_aging_population_idea
-				JAP_keiretsu_control_idea
 			}
 			focuses = {
 				JAP_japan_on_the_world_stage
@@ -142,3 +142,4 @@ bookmarks = {
 		}
 	}
 }
+
