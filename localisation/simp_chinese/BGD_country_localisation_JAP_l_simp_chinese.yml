@@ -330,7 +330,7 @@
  pdto.1.a: "回见"
  pdto.1_tt: "§3在解决台海的局势后，我们将与这些美军残部进行更深入的合作§!"
  pdto.2.t: "悬崖勒马"
- pdto.2.d: "凑同学，我们还有不要介入台海局势了吧\n\n美竹同学，这个是纱夜觉得的，你应该去找她而不是我"
+ pdto.2.d: "凑同学，我们还有不要介入台海局势了吧\n\n美竹同学，这个是纱夜的决定，你应该去找她而不是我"
  pdto.2.a: "那还是算了吧"
  pdto.3.t: "红龙来袭"
  pdto.3.d: "我们还有别的选择吗？"
@@ -389,4 +389,5 @@
  JAP_faction_MOR: "£GFX_MOR_logo §2Morfonica§!"
  JAP_faction_MYGO: "£GFX_MYGO_logo §4MyGO!!!!!§!"
  JAP_faction_AVE: "£GFX_AVE_logo §dAve Mujica§!"
+
  japan_centrist: "日式中间主义"
