@@ -164,6 +164,7 @@ debug_decisions = {
 			hidden_effect = {
 			load_focus_tree = TFR_taihai_JAP
 			set_country_flag = JAP_be_defeated
+			clr_country_flag = JAP_be_victory
 			}
 		}
 	}
@@ -184,6 +185,7 @@ debug_decisions = {
 			hidden_effect = {
 			load_focus_tree = TFR_taihai_JAP
 			set_country_flag = JAP_be_victory
+			clr_country_flag = JAP_be_defeated
 			}
 		}
 	}
@@ -15158,3 +15160,4 @@ JAP_jietai_cat = {
 		}
 	}
 }
+
