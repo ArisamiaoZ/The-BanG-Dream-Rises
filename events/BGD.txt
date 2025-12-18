@@ -791,6 +791,18 @@ country_event = {
 	}
 }
 country_event = {
+	# 占位符
+	id = bgd.0
+	title = bgd.0.t
+	desc = bgd.0.d
+	picture = GFX_JAP_the_end
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.0.a
+	}
+}
+country_event = {
 	# 输麻咯
 	id = bgd.1
 	title = bgd.1.t
