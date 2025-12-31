@@ -1,0 +1,980 @@
+focus_tree = {
+	id = TFR_taihai_JAP
+	country = {
+		factor = 0
+		modifier = {
+			add = 0
+			tag = JAP
+		}
+	}
+	default = no
+	# 台海战争！
+	focus = {
+		id = Jap_defending_blue_china
+		icon = GFX_focus_JAP_reclaim_island
+		cost = 0.5
+		x = 9
+		y = 0
+		allow_branch = {
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = roselia.2
+			}
+			#hidden_effect = {
+			#	scoped_play_song = "setsuna"
+			#}
+		}
+	}
+	focus = {
+		id = Jap_mzl_scheme
+		icon = GFX_focus_JAP_reclaim_island
+		cost = 0.5
+		x = 3
+		y = 1
+		prerequisite = {
+			focus = Jap_defending_blue_china
+		}
+		mutually_exclusive = {
+			focus = Jap_chuchu_scheme
+		}
+		available = {
+			is_completed_by_event = yes
+		}
+		allow_branch = {
+			has_country_flag = JAP_taiwan_selection_completed
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		completion_reward = {
+			add_dynamic_modifier = {
+				modifier = JAP_mitake_ran_scheme
+			}
+			set_variable = { JAP_MZL_army_org_factor = 0.05 }
+			set_variable = { JAP_MZL_army_morale_factor = 0.10 }
+			set_variable = { JAP_MZL_army_defence_factor = 0.10 }
+			set_variable = { JAP_MZL_planning_speed = 0.10 }
+			set_variable = { JAP_MZL_max_planning = 0.05 }
+		}
+	}
+	focus = {
+		id = Jap_guerrilla_warfare
+		icon = GFX_focus_JAP_reclaim_island
+		cost = 2
+		x = 3
+		y = 2
+		prerequisite = {
+			focus = Jap_mzl_scheme
+		}
+		allow_branch = {
+			has_country_flag = JAP_taiwan_selection_completed
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		completion_reward = {
+		custom_effect_tooltip = Jap_guerrilla_warfare_tt
+		JAP = {
+			add_to_variable = { JAP_MZL_army_org_factor = 0.05 }
+			add_to_variable = { JAP_MZL_planning_speed = 0.10 }
+			add_to_variable = { JAP_MZL_max_planning = 0.05 }
+			add_to_variable = { JAP_MZL_army_speed_factor = 0.10 }
+			}
+		}
+	}
+	focus = {
+		id = Jap_special_operations_team
+		icon = GFX_focus_JAP_reclaim_island
+		cost = 2
+		x = 3
+		y = 3
+		prerequisite = {
+			focus = Jap_guerrilla_warfare
+		}
+		allow_branch = {
+			has_country_flag = JAP_taiwan_selection_completed
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		completion_reward = {
+		custom_effect_tooltip = Jap_special_operations_team_tt
+		hidden_effect = {
+			load_oob = mzl_taiwan_strait_special_operations_team
+			}
+		}
+	}
+	focus = {
+		id = Jap_urban_guerrilla_warfare
+		icon = GFX_focus_JAP_reclaim_island
+		cost = 2
+		x = 1
+		y = 4
+		prerequisite = {
+			focus = Jap_special_operations_team
+		}
+		allow_branch = {
+			has_country_flag = JAP_taiwan_selection_completed
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		completion_reward = {
+		custom_effect_tooltip = Jap_urban_guerrilla_warfare_tt
+		JAP = {
+			add_to_variable = { JAP_MZL_max_dig_in_factor = 0.40 }
+			add_to_variable = { JAP_MZL_dig_in_speed_factor = 0.60 }
+			add_to_variable = { JAP_MZL_terrain_penalty_reduction = 0.10 }
+			}
+		}
+	}
+	focus = {
+		id = Jap_mountain_guerrilla_warfare
+		icon = GFX_focus_JAP_reclaim_island
+		cost = 2
+		x = 5
+		y = 4
+		prerequisite = {
+			focus = Jap_special_operations_team
+		}
+		allow_branch = {
+			has_country_flag = JAP_taiwan_selection_completed
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		completion_reward = {
+		custom_effect_tooltip = Jap_mountain_guerrilla_warfare_tt
+		JAP = {
+			add_to_variable = { JAP_MZL_no_supply_grace = 10 }
+			add_to_variable = { JAP_MZL_out_of_supply_factor = -0.20 }
+			add_to_variable = { JAP_MZL_supply_consumption_factor = -0.10 }
+			}
+		}
+	}
+	focus = {
+		id = Jap_mobilize_the_militia
+		icon = GFX_focus_JAP_reclaim_island
+		cost = 2
+		x = 3
+		y = 4
+		prerequisite = {
+			focus = Jap_special_operations_team
+		}
+		allow_branch = {
+			has_country_flag = JAP_taiwan_selection_completed
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		completion_reward = {
+		unlock_decision_tooltip = JAP_taihai_signs_of_militia
+		custom_effect_tooltip = Jap_mobilize_the_militia_tt
+		JAP = {
+			add_to_variable = { JAP_MZL_army_infantry_attack_factor = 0.10 }
+			add_to_variable = { JAP_MZL_army_infantry_defence_factor = 0.10 }
+			add_to_variable = { JAP_MZL_modifier_army_sub_unit_militia_attack_factor = 0.20 }
+			add_to_variable = { JAP_MZL_modifier_army_sub_unit_militia_defence_factor = 0.20 }
+			}
+		hidden_effect = {
+			load_oob = taiwan_strait_militia
+			}
+		}
+	}
+	focus = {
+		id = Jap_maritime_guerrilla_warfare
+		icon = GFX_focus_JAP_reclaim_island
+		cost = 2
+		x = 3
+		y = 5
+		prerequisite = {
+			focus = Jap_urban_guerrilla_warfare
+		}
+		prerequisite = {
+			focus = Jap_mountain_guerrilla_warfare
+		}
+		allow_branch = {
+			has_country_flag = JAP_taiwan_selection_completed
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		completion_reward = {
+		custom_effect_tooltip = Jap_maritime_guerrilla_warfare_tt
+		JAP = {
+			add_to_variable = { JAP_MZL_navy_submarine_attack_factor = 0.05 }
+			add_to_variable = { JAP_MZL_convoy_raiding_efficiency_factor = 0.20 }
+			add_to_variable = { JAP_MZL_naval_hit_chance = 0.10 }
+			add_to_variable = { JAP_MZL_naval_speed_factor = 0.10 }
+			}
+		}
+	}
+	focus = {
+		id = Jap_cut_off_enemy_supply_lines
+		icon = GFX_focus_JAP_reclaim_island
+		cost = 2
+		x = 3
+		y = 6
+		prerequisite = {
+			focus = Jap_maritime_guerrilla_warfare
+		}
+		allow_branch = {
+			has_country_flag = JAP_taiwan_selection_completed
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		completion_reward = {
+			PRC = {
+				add_timed_idea = {
+					idea = JAP_PRC_supply_obstruction
+					days = 40
+				}
+			}
+			JAP = {
+				add_days_mission_timeout = {
+					mission = JAP_taiwan_war_mission
+					days = -30
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_war_with = PRC
+					}
+					PRC = {
+						add_days_mission_timeout = {
+							mission = PRC_taiwan_war_countdown
+							days = -30
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = Jap_chuchu_scheme
+		icon = GFX_focus_JAP_reclaim_island
+		cost = 0.5
+		x = 15
+		y = 1
+		prerequisite = {
+			focus = Jap_defending_blue_china
+		}
+		mutually_exclusive = {
+			focus = Jap_mzl_scheme
+		}
+		available = {
+			is_completed_by_event = yes
+		}
+		allow_branch = {
+			has_country_flag = JAP_taiwan_selection_completed
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		completion_reward = {
+			add_dynamic_modifier = {
+				modifier = JAP_tamade_chiyu_scheme
+			}
+			set_variable = { JAP_CHU_army_attack_factor = 0.05 }
+			set_variable = { JAP_CHU_army_org_factor = -0.05 }
+			set_variable = { JAP_CHU_army_armor_attack_factor = 0.10 }
+			set_variable = { JAP_CHU_army_speed_factor = 0.05 }
+			set_variable = { JAP_CHU_air_cas_efficiency = 0.10 }
+		}
+	}
+	focus = {
+		id = Jap_frontal_counterattack
+		icon = GFX_focus_JAP_reclaim_island
+		cost = 2
+		x = 15
+		y = 2
+		prerequisite = {
+			focus = Jap_chuchu_scheme
+		}
+		allow_branch = {
+			has_country_flag = JAP_taiwan_selection_completed
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		completion_reward = {
+		custom_effect_tooltip = Jap_frontal_counterattack_tt
+		JAP = {
+			add_to_variable = { JAP_CHU_army_attack_factor = 0.05 }
+			add_to_variable = { JAP_CHU_army_org_factor = 0.10 }
+			add_to_variable = { JAP_CHU_land_reinforce_rate = 0.05 }
+			}
+		}
+	}
+	focus = {
+		id = Jap_more_armored_units
+		icon = GFX_focus_JAP_reclaim_island
+		cost = 2
+		x = 13
+		y = 3
+		prerequisite = {
+			focus = Jap_frontal_counterattack
+		}
+		allow_branch = {
+			has_country_flag = JAP_taiwan_selection_completed
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = Jap_armored_units_tt
+			hidden_effect = {
+				load_oob = chu_taiwan_strait_special_operations_team
+				}
+				add_equipment_to_stockpile = {
+					type = modern_tank_chassis_1
+					variant_name = "Type-10"
+					amount = 750
+					producer = JAP
+				}
+		custom_effect_tooltip = Jap_more_armored_units_tt
+		JAP = {
+			add_to_variable = { JAP_CHU_army_armor_attack_factor = 0.10 }
+			add_to_variable = { JAP_CHU_army_armor_defence_factor = 0.10 }
+			}
+		}
+	}
+	focus = {
+		id = Jap_with_soaring_aspirations
+		icon = GFX_focus_JAP_reclaim_island
+		cost = 2
+		x = 15
+		y = 3
+		prerequisite = {
+			focus = Jap_frontal_counterattack
+		}
+		allow_branch = {
+			has_country_flag = JAP_taiwan_selection_completed
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe_1
+				variant_name = "F-35"
+				amount = 200
+				producer = JAP
+			}
+		custom_effect_tooltip = Jap_with_soaring_aspirations_tt
+		JAP = {
+			add_to_variable = { JAP_CHU_air_superiority_efficiency = 0.10 }
+			add_to_variable = { JAP_CHU_air_ace_generation_chance_factor = 0.20 }
+			add_to_variable = { JAP_CHU_air_weather_penalty = -0.10 }
+			}
+		}
+	}
+	focus = {
+		id = Jap_mechanized_self_defense_forces
+		icon = GFX_focus_JAP_reclaim_island
+		cost = 2
+		x = 17
+		y = 3
+		prerequisite = {
+			focus = Jap_frontal_counterattack
+		}
+		allow_branch = {
+			has_country_flag = JAP_taiwan_selection_completed
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = mechanized_equipment_3
+				amount = 2000
+				producer = JAP
+			}
+		custom_effect_tooltip = Jap_mechanized_self_defense_forces_tt
+		JAP = {
+			add_to_variable = { JAP_CHU_mechanized_attack_factor = 0.10 }
+			add_to_variable = { JAP_CHU_mechanized_defence_factor = 0.10 }
+			}
+		}
+	}
+	focus = {
+		id = Jap_air_ground_integration
+		icon = GFX_focus_JAP_reclaim_island
+		cost = 2
+		x = 15
+		y = 4
+		prerequisite = {
+			focus = Jap_with_soaring_aspirations
+		}
+		allow_branch = {
+			has_country_flag = JAP_taiwan_selection_completed
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		completion_reward = {
+		custom_effect_tooltip = Jap_air_ground_integration_tt
+		JAP = {
+			add_to_variable = { JAP_CHU_ground_attack_factor = 0.10 }
+			add_to_variable = { JAP_CHU_air_cas_present_factor = 0.10 }
+			add_to_variable = { JAP_CHU_air_cas_efficiency = 0.10 }
+			}
+		}
+	}
+	focus = {
+		id = Jap_armored_fist
+		icon = GFX_focus_JAP_reclaim_island
+		cost = 2
+		x = 14
+		y = 5
+		prerequisite = {
+			focus = Jap_air_ground_integration
+		}
+		prerequisite = {
+			focus = Jap_more_armored_units
+		}
+		allow_branch = {
+			has_country_flag = JAP_taiwan_selection_completed
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		completion_reward = {
+		custom_effect_tooltip = Jap_armored_fist_tt
+		JAP = {
+			add_to_variable = { JAP_CHU_army_armor_attack_factor = 0.10 }
+			add_to_variable = { JAP_CHU_army_armor_defence_factor = -0.5 }
+			}
+		}
+	}
+	focus = {
+		id = Jap_rapid_response_force
+		icon = GFX_focus_JAP_reclaim_island
+		cost = 2
+		x = 16
+		y = 5
+		prerequisite = {
+			focus = Jap_air_ground_integration
+		}
+		prerequisite = {
+			focus = Jap_mechanized_self_defense_forces
+		}
+		allow_branch = {
+			has_country_flag = JAP_taiwan_selection_completed
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		completion_reward = {
+		custom_effect_tooltip = Jap_rapid_response_force_tt
+		JAP = {
+			add_to_variable = { JAP_CHU_army_speed_factor = 0.15 }
+			add_to_variable = { JAP_CHU_land_reinforce_rate = 0.5 }
+			}
+		}
+	}
+	focus = {
+		id = Jap_Bang
+		icon = GFX_focus_JAP_reclaim_island
+		cost = 2
+		x = 15
+		y = 6
+		prerequisite = {
+			focus = Jap_armored_fist
+		}
+		prerequisite = {
+			focus = Jap_rapid_response_force
+		}
+		allow_branch = {
+			has_country_flag = JAP_taiwan_selection_completed
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = JAP_CHUCHU_Bang
+				days = 40
+			}
+		}
+	}
+	focus = {
+		id = Jap_adapt_to_modern_offensives
+		icon = GFX_focus_JAP_reclaim_island
+		cost = 0.5
+		x = 9
+		y = 2
+		prerequisite = {
+			focus = Jap_mzl_scheme
+			focus = Jap_chuchu_scheme
+		}
+		prerequisite = {
+			focus = Jap_defending_blue_china
+		}
+		allow_branch = {
+			has_country_flag = JAP_taiwan_selection_completed
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = insufficient_understanding_of_modern_warfare_idea
+				add_idea = insufficient_understanding_of_modern_warfare_idea2
+			}
+			unlock_decision_tooltip = JAP_adapt_to_modern_defense
+			unlock_decision_tooltip = JAP_adapt_to_modern_offensives_1
+			unlock_decision_tooltip = JAP_adapt_to_modern_airbattles
+		}
+	}
+	focus = {
+		id = Jap_assisting_allies
+		icon = GFX_focus_JAP_reclaim_island
+		cost = 2
+		x = 8
+		y = 3
+		prerequisite = {
+			focus = Jap_adapt_to_modern_offensives
+		}
+		allow_branch = {
+			has_country_flag = JAP_taiwan_selection_completed
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		completion_reward = {
+			AST = {
+				add_ideas = PDO_assisting_allies_idea
+			}
+			CHI = {
+				add_ideas = PDO_assisting_allies_idea
+			}
+			AST = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_2
+					amount = 2500
+					producer = JAP
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 250
+					producer = JAP
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 300
+					producer = JAP
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 300
+					producer = JAP
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 400
+					producer = JAP
+				}
+			}
+			CHI = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_2
+					amount = 2500
+					producer = JAP
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 250
+					producer = JAP
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 300
+					producer = JAP
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 300
+					producer = JAP
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 400
+					producer = JAP
+				}
+			}
+		}
+	}
+	focus = {
+		id = Jap_strengthen_maritime_supply_lines
+		icon = GFX_focus_JAP_reclaim_island
+		cost = 2
+		x = 10
+		y = 3
+		prerequisite = {
+			focus = Jap_adapt_to_modern_offensives
+		}
+		allow_branch = {
+			has_country_flag = JAP_taiwan_selection_completed
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		completion_reward = {
+			add_ideas = PDO_strengthen_maritime_supply_lines_idea
+			AST = {
+				add_ideas = PDO_strengthen_maritime_supply_lines_idea
+			}
+			CHI = {
+				add_ideas = PDO_strengthen_maritime_supply_lines_idea
+			}
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 250
+				producer = JAP
+			}
+			AST = {
+				add_equipment_to_stockpile = {
+					type = convoy
+					amount = 250
+					producer = JAP
+				}
+			}
+		}
+	}
+	focus = {
+		id = Jap_controversy_for_breath
+		icon = GFX_focus_JAP_reclaim_island
+		cost = 2
+		x = 9
+		y = 4
+		prerequisite = {
+			focus = Jap_strengthen_maritime_supply_lines
+		}
+		prerequisite = {
+			focus = Jap_assisting_allies
+		}
+		allow_branch = {
+			has_country_flag = JAP_taiwan_selection_completed
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		completion_reward = {
+			CHI = {
+				add_timed_idea = {
+					idea = PDO_controversy_for_breath_idea
+					days = 20
+				}
+			}
+		}
+	}
+	focus = {
+		id = Jap_reclaim_kinmen
+		icon = GFX_focus_JAP_kinmen
+		prerequisite = {
+			focus = Jap_controversy_for_breath
+		}
+		allow_branch = {
+			has_country_flag = JAP_taiwan_selection_completed
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		cost = 2
+		x = 9
+		y = 5
+		completion_reward = {
+			unlock_decision_tooltip = JAP_activate_mission_kinmen
+		}
+	}
+	focus = {
+		id = Jap_standing_tall_here
+		icon = GFX_focus_JAP_reclaim_island
+		prerequisite = {
+			focus = Jap_cut_off_enemy_supply_lines
+			focus = Jap_Bang
+		}
+		prerequisite = {
+			focus = Jap_reclaim_kinmen
+		}
+		allow_branch = {
+			has_country_flag = JAP_taiwan_selection_completed
+			NOT = {
+				OR = {
+					has_country_flag = JAP_be_defeated
+					has_country_flag = JAP_be_victory
+				}
+			}
+		}
+		cost = 2
+		x = 9
+		y = 7
+		completion_reward = {
+			JAP = {
+				add_days_mission_timeout = {
+					mission = JAP_taiwan_war_mission
+					days = -40
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_war_with = PRC
+					}
+					PRC = {
+						add_days_mission_timeout = {
+							mission = PRC_taiwan_war_countdown
+							days = -40
+						}
+					}
+				}
+			}
+		}
+	}
+	#######################
+	#      输麻了这回      #
+	#######################
+	focus = {
+		id = Jap_make_a_fool_of_oneself
+		icon = GFX_focus_JAP_defeat_enduring
+		cost = 2
+		x = 6
+		y = 0
+		available = {
+			has_country_flag = JAP_be_defeated
+		}
+		allow_branch = {
+			has_country_flag = JAP_be_defeated
+		}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = Jap_suspend_congress
+		icon = GFX_focus_JAP_calm_the_bureaucracy
+		cost = 2
+		x = 4
+		y = 1
+		prerequisite = {
+			focus = Jap_make_a_fool_of_oneself
+		}
+		available = {
+			has_country_flag = JAP_be_defeated
+		}
+		allow_branch = {
+			has_country_flag = JAP_be_defeated
+		}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = JAP_quell_the_protests
+		icon = GFX_focus_JAP_restore_order
+		cost = 2
+		x = 8
+		y = 1
+		prerequisite = {
+			focus = Jap_make_a_fool_of_oneself
+		}
+		available = {
+			has_country_flag = JAP_be_defeated
+		}
+		allow_branch = {
+			has_country_flag = JAP_be_defeated
+		}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = JAP_salvage_the_situation
+		icon = GFX_focus_JAP_defeat_enduring
+		cost = 2
+		x = 6
+		y = 2
+		prerequisite = {
+			focus = Jap_suspend_congress
+		}
+		prerequisite = {
+			focus = JAP_quell_the_protests
+		}
+		available = {
+			has_country_flag = JAP_be_defeated
+		}
+		allow_branch = {
+			has_country_flag = JAP_be_defeated
+		}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = JAP_mzl_putsch
+		icon = GFX_focus_JAP_save_our_democracy
+		cost = 2
+		x = 5
+		y = 3
+		prerequisite = {
+			focus = JAP_salvage_the_situation
+		}
+		mutually_exclusive = {
+			focus = JAP_prepare_the_new_congress
+		}
+		mutually_exclusive = {
+			focus = JAP_chu_putsch
+		}
+		available = {
+			has_country_flag = JAP_be_defeated
+			NOT = {
+				has_country_flag = Jap_chuchu_putsch
+				has_country_flag = JAP_ongoing_taiwan_war
+			}
+		}
+		allow_branch = {
+			has_country_flag = JAP_be_defeated
+			NOT = {
+				has_country_flag = Jap_chuchu_putsch
+				has_country_flag = JAP_ongoing_taiwan_war
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = JAP_chu_putsch
+		icon = GFX_focus_JAP_formation_of_military_government
+		cost = 2
+		x = 5
+		y = 3
+		prerequisite = {
+			focus = JAP_salvage_the_situation
+		}
+		mutually_exclusive = {
+			focus = JAP_mzl_putsch
+		}
+		mutually_exclusive = {
+			focus = JAP_prepare_the_new_congress
+		}
+		available = {
+			has_country_flag = JAP_be_defeated
+			NOT = {
+				has_country_flag = Jap_mzl_putsch
+				has_country_flag = JAP_ongoing_taiwan_war
+			}
+		}
+		allow_branch = {
+			has_country_flag = JAP_be_defeated
+			NOT = {
+				has_country_flag = JAP_mzl_putsch
+				has_country_flag = JAP_ongoing_taiwan_war
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = JAP_prepare_the_new_congress
+		icon = GFX_focus_JAP_defeat_enduring
+		cost = 2
+		x = 7
+		y = 3
+		prerequisite = {
+			focus = JAP_salvage_the_situation
+		}
+		mutually_exclusive = {
+			focus = JAP_mzl_put_an_end_to_weakness
+		}
+		mutually_exclusive = {
+			focus = JAP_chu_put_an_end_to_weakness
+		}
+		available = {
+			has_country_flag = JAP_be_defeated
+		}
+		allow_branch = {
+			has_country_flag = JAP_be_defeated
+		}
+		completion_reward = {
+
+		}
+	}
+}
