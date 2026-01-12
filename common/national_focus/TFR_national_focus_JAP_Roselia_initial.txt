@@ -226,7 +226,7 @@ focus_tree = {
         	    meta_effect = {
         	        text = {
         	            generate_character = {
-        	                token_base = mmmmmmmmmmzl
+        	                token_base = mzl
         	                name = "美竹兰"
         	                gender = male
         	                nationality = jap
@@ -250,6 +250,7 @@ focus_tree = {
 									skirmisher
 									guerilla_fighter
 									hidden_sympathies
+									trait_APA_zealous_anti_fascist
             	                }
             	                skill = 4
             	                attack_skill = 4
@@ -291,6 +292,42 @@ focus_tree = {
 			add_ideas = JAP_chu
 			set_country_flag = Jap_Roselia_chu
 			add_political_power = 75
+			hidden_effect = {
+        	    meta_effect = {
+        	        text = {
+        	            generate_character = {
+        	                token_base = chu
+        	                name = "珠手知由"
+        	                gender = male
+        	                nationality = jap
+        	                portraits = {
+        	                    civilian = {
+        	                        large = "gfx\leaders\JAP\generals\JAP_tamade_chiyu.png"
+        	                        small = "gfx\leaders\JAP\generals\JAP_tamade_chiyu.png"
+        	                    }
+        	                }
+        	                allowed_civil_war = { is_ai = no }
+        	                corps_commander = {
+            	                traits = {
+									hidden_sympathies
+									brilliant_strategist
+									cavalry_expert
+									cavalry_leader
+									panzer_leader
+									panzer_expert
+									trait_reckless
+									harsh_leader
+            	                }
+            	                skill = 4
+            	                attack_skill = 6
+            	                defense_skill = 1
+            	                planning_skill = 5
+            	                logistics_skill = 3
+            	            }
+            	        }
+            	    }
+            	}
+            }
 		}
 	}
 	focus = {
