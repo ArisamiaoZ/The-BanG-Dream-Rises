@@ -1,0 +1,984 @@
+add_namespace = ceshi
+add_namespace = bgd
+add_namespace = abe_shinzo
+add_namespace = roselia
+add_namespace = novelcoronavirus
+add_namespace = election
+add_namespace = pdto
+add_namespace = fucktaiwan
+
+###################
+#    测试用事件    #
+###################
+
+country_event = {
+	id = ceshi.0
+	title = ceshi.0.t
+	desc = ceshi.0.d
+	picture = GFX_JAP_taiwan
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = ceshi.0.a
+		set_country_flag = Jap_mzl_putsch
+		focus_unlock = yes
+	}
+	option = {
+		name = ceshi.0.b
+		set_country_flag = Jap_chuchu_putsch
+		focus_unlock = yes
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	id = abe_shinzo.1
+	title = abe_shinzo.1.t
+	desc = abe_shinzo.1.d
+	picture = GFX_JAP_abe_death
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		date = 2020.01.01
+		tag = JAP
+	}
+	option = { 
+		name = abe_shinzo.1.a
+		country_event = {
+			id = abe_shinzo.2
+			days = 0
+		}
+	}
+}
+country_event = {
+	id = abe_shinzo.2
+	title = abe_shinzo.2.t
+	desc = abe_shinzo.2.d
+	picture = GFX_JAP_abe_death
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			news_event = {
+				id = news.536
+				hours = 1
+			}
+		}
+	}
+	option = { 
+		name = abe_shinzo.2.a
+		custom_effect_tooltip = abe_shinzo.2_tt
+		add_stability = -0.05
+		add_manpower = -1
+		retire_character = JAP_shinzo_abe_char
+		set_country_flag = JAP_abe_death
+		set_temp_variable = {
+			var = JAP_election_approval_rating_ldp_var_temp #自由民主党
+			value = -0.05
+		}
+		JAP_add_election_approval_rating_ldp = yes
+		custom_effect_tooltip = remove_head_minister_tooltip
+		show_ideas_tooltip = JAP_abe
+		hidden_effect = {
+		add_country_leader_role = {
+            character = JAP_interim_government_char
+			country_leader = {
+				ideology = right_populism
+			}
+			country_leader = {
+				ideology = ultra_conservatism
+			}
+        }
+		remove_ideas = JAP_abe
+			add_ideas = {
+				vacant_hog
+			}
+			country_event = {
+				id = abe_shinzo.3
+				days = 3
+			}
+		}
+	}
+}
+country_event = {
+	id = abe_shinzo.3
+	title = abe_shinzo.3.t
+	desc = abe_shinzo.3.d
+	picture = GFX_japanese_flag
+	is_triggered_only = yes
+	option = { 
+		name = abe_shinzo.3.a
+		set_country_flag = JAP_black_gold
+		custom_effect_tooltip = abe_shinzo.3_tt
+		add_ideas = JAP_political_chaos
+		add_stability = -0.10
+		add_political_power = -100
+		set_temp_variable = {
+			var = JAP_election_approval_rating_ldp_var_temp #自由民主党
+			value = -0.10
+		}
+		JAP_add_election_approval_rating_ldp = yes
+		set_temp_variable = {
+			var = JAP_ldp_centrists_var_temp #中道派
+			value = -0.30
+		}
+		JAP_add_influence_ldp_centrists = yes
+
+		set_temp_variable = {
+			var = JAP_ldp_conservatives_var_temp #保守派
+			value = -0.40
+		}
+		JAP_add_influence_ldp_conservatives = yes
+		add_popularity = {
+			ideology = conservative
+			popularity = -0.2
+		}
+		hidden_effect = {
+			load_focus_tree = TFR_Roselia_initial_JAP
+			add_ideas = {
+				vacant_hog
+				vacant_for
+				vacant_eco
+				vacant_sec
+				vacant_int
+				vacant_theorist
+			}
+			country_event = {
+				id = abe_shinzo.4
+				days = 5
+			}
+			country_event = {
+				id = abe_shinzo.5
+				days = 5
+			}
+		}
+	}
+}
+country_event = {
+	id = abe_shinzo.4
+	title = abe_shinzo.4.t
+	desc = abe_shinzo.4.d
+	picture = GFX_japanese_flag
+	is_triggered_only = yes
+	option = { 
+		name = abe_shinzo.4.a
+		add_ideas = JAP_1left_wing_opposition
+	}
+}
+country_event = {
+	id = abe_shinzo.5
+	title = abe_shinzo.5.t
+	desc = abe_shinzo.5.d
+	picture = GFX_japanese_flag
+	is_triggered_only = yes
+	option = { 
+		name = abe_shinzo.5.a
+		add_ideas = JAP_right_wing_opposition
+	}
+}
+country_event = {
+	id = roselia.0
+	title = roselia.0.t
+	desc = roselia.0.d
+	picture = GFX_japanese_flag
+	is_triggered_only = yes
+	option = { 
+		name = roselia.0.a
+		custom_effect_tooltip = roselia.0_tt
+		set_country_flag = Jap_Roselia
+		hidden_effect = {
+			add_ideas = JAP_ykn
+			add_ideas = JAP_lisa
+			add_ideas = JAP_sayo
+			add_ideas = JAP_rin_defence
+			retire_character = JAP_interim_government_char
+			retire_character = JAP_kenta_izumi_char
+			retire_character = JAP_ichiro_matsui_char1
+			retire_character = JAP_fudao_char
+			add_country_leader_role = {
+       	     character = JAP_minato_yukina_char
+        	    promote_leader = yes
+				country_leader = {
+					ideology = liberal_socialism
+				}
+				country_leader = {
+					ideology = civic_nationalism
+				}
+       		}
+			add_country_leader_role = {
+        	    character = JAP_hikawa_sayo_char
+        	    promote_leader = yes
+				country_leader = {
+					ideology = right_populism
+				}
+				country_leader = {
+					ideology = ultra_conservatism
+				}
+        	}
+			add_country_leader_role = {
+       	     character = JAP_imai_lisa_char
+        	    promote_leader = yes
+				country_leader = {
+					ideology = left_populism
+				}
+       		}
+			set_politics = {
+				ruling_party = social_liberal
+				elections_allowed = no
+			}
+			set_country_leader_ideology = japan_centrist
+			set_party_name = {
+				ideology = social_liberal
+				long_name = JAP_LDP_CDP_long
+				name = JAP_LDP_CDP
+			}
+			set_party_name = {
+				ideology = social_democrat
+				long_name = JAP_LDP_SDP_long
+				name = JAP_LDP_SDP
+			}
+			set_party_name = {
+				ideology = market_liberal
+				long_name = JAP_LDP_INO_long
+				name = JAP_LDP_INO
+			}
+			set_temp_variable = {
+				ruling_party_wing_var_temp = token:social_democrat
+			}
+			add_ruling_party_wing = yes
+			set_temp_variable = {
+				ruling_party_wing_var_temp = token:market_liberal
+			}
+			add_ruling_party_wing = yes
+			set_temp_variable = {
+				ruling_party_wing_var_temp = token:conservative
+			}
+			add_ruling_party_wing = yes
+			set_temp_variable = {
+				ruling_party_wing_var_temp = token:authoritarian_democrat
+			}
+			add_ruling_party_wing = yes
+			set_temp_variable = {
+				coalition_partner_var_temp = token:social_democrat
+			}
+			add_to_coalition = yes
+			set_temp_variable = {
+				coalition_partner_var_temp = token:market_liberal
+			}
+			add_to_coalition = yes
+			set_temp_variable = {
+				coalition_partner_var_temp = token:conservative
+			}
+			add_to_coalition = yes
+			set_temp_variable = {
+				coalition_partner_var_temp = token:authoritarian_democrat
+			}
+			add_to_coalition = yes
+			country_event = {
+				id = novelcoronavirus.1
+				days = 20
+			}
+        	meta_effect = {
+                text = {
+                    generate_character = {
+                        token_base = sayo
+                        name = "冰川纱夜"
+                        gender = male
+                        nationality = jap
+                        portraits = {
+                            civilian = {
+                                large = "gfx\leaders\JAP\generals\JAP_hikawa_sayo.png"
+                                small = "gfx\leaders\JAP\generals\JAP_hikawa_sayo.png"
+                            }
+                        }
+                        allowed_civil_war = { is_ai = no }
+                        field_marshal = {
+        	                traits = {
+								politically_connected
+								trait_cautious
+								harsh_leader
+								armor_officer
+								panzer_leader
+								panzer_expert
+								organizer
+								offensive_doctrine
+								aggressive_assaulter
+								inspirational_leader
+								
+        	                }
+        	                skill = 2
+        	                attack_skill = 6
+        	                defense_skill = 2
+        	                planning_skill = 5
+        	                logistics_skill = 4
+        	            }
+         	        }
+          	    }
+           	}
+		}
+	}
+}
+country_event = {
+	id = novelcoronavirus.1
+	title = novelcoronavirus.1.t
+	desc = novelcoronavirus.1.d
+	picture = GFX_Generic_COVID1
+	is_triggered_only = yes
+	option = { 
+		name = novelcoronavirus.1.a
+		add_political_power = 75
+		add_days_mission_timeout = {
+			mission = JAP_the_pandemic_worsens_mission
+			days = 25
+		}
+		set_country_flag = JAP_deal_with_the_pandemic
+		unlock_decision_tooltip = JAP_distribute_masks
+		unlock_decision_tooltip = JAP_announce_guidelines
+		unlock_decision_tooltip = JAP_enforce_lockdowns
+		hidden_effect = {
+			country_event = {
+				id = novelcoronavirus.2
+				days = 10
+			}
+		}
+	}
+}
+country_event = {
+	id = novelcoronavirus.2
+	title = novelcoronavirus.2.t
+	desc = novelcoronavirus.2.d
+	picture = GFX_Generic_COVID1
+	is_triggered_only = yes
+	option = { 
+		name = novelcoronavirus.2.a
+		add_political_power = 75
+		add_days_mission_timeout = {
+			mission = JAP_the_pandemic_worsens_mission
+			days = 25
+		}
+		add_stability = 0.05
+		set_temp_variable = {
+			var = poverty_development_var_temp
+			value = 0.05
+		}
+		add_poverty_development = yes
+		hidden_effect = {
+			country_event = {
+				id = novelcoronavirus.3
+				days = 10
+			}
+		}
+	}
+}
+country_event = {
+	id = novelcoronavirus.3
+	title = novelcoronavirus.3.t
+	desc = novelcoronavirus.3.d
+	picture = GFX_Generic_COVID1
+	is_triggered_only = yes
+	option = { 
+		name = novelcoronavirus.3.a
+		add_political_power = 75
+		activate_mission = JAP_vaccine_research_mission
+		custom_effect_tooltip = JAP_research_the_vaccine_tt
+		hidden_effect = {
+			country_event = {
+				id = novelcoronavirus.4
+				days = 10
+			}
+		}
+	}
+}
+country_event = {
+	id = novelcoronavirus.4
+	title = novelcoronavirus.4.t
+	desc = novelcoronavirus.4.d
+	picture = GFX_Generic_COVID1
+	is_triggered_only = yes
+	option = { 
+		name = novelcoronavirus.4.a
+		add_political_power = 75
+		set_country_flag = JAP_continue_the_lockdowns
+		unlock_decision_tooltip = JAP_enforce_mass_lockdowns
+		custom_effect_tooltip = JAP_continue_the_lockdowns_tt
+		set_temp_variable = {
+			var = JAP_election_approval_rating_jcp_var_temp
+			value = 0.005
+		}
+		JAP_add_election_approval_rating_jcp = yes
+		set_temp_variable = {
+			var = JAP_election_approval_rating_sdp_var_temp
+			value = 0.005
+		}
+		JAP_add_election_approval_rating_sdp = yes
+		set_temp_variable = {
+			var = JAP_election_approval_rating_ino_var_temp
+				value = 0.005
+		}
+		JAP_add_election_approval_rating_ino = yes
+		set_temp_variable = {
+			var = JAP_election_approval_rating_kdp_var_temp
+			value = 0.01
+		}
+		JAP_add_election_approval_rating_kdp = yes
+	}
+}
+country_event = {
+	# 大选
+	id = election.1
+	title = election.1.t
+	desc = election.1.d
+	picture = GFX_JAP_incoming_elections
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = JAP_election_time
+			mark_focus_tree_layout_dirty = yes
+			activate_mission = JAP_election_mission
+			activate_mission = JAP_opposition_growth_mission
+		}
+	}
+	option = {
+		name = election.1.a
+		hidden_effect = {
+			set_country_flag = JAP_sided_with_ldp
+			country_event = {
+				id = election.4
+				days = 65
+			}
+			country_event = {
+				id = jap.114
+				days = 10
+			}
+			if = {
+			    limit = {
+			        has_game_rule = {
+			            rule = JAP_ai_behavior
+			            option = LDP_AI_BEHAVIOR
+			            }
+			        }
+			        set_temp_variable = {
+			            var = JAP_election_approval_rating_ldp_var_temp
+			            value = 1
+			        }
+					JAP_add_election_approval_rating_ldp = yes
+			    }
+			}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = JAP_ai_behavior
+					option = CIVIC_COALITION_AI_BEHAVIOR
+				}
+			}
+		}
+	}
+}
+country_event = {
+	# 自民党胜利
+	id = election.2
+	title = election.2.t
+	desc = election.2.d
+	picture = GFX_JAP_voting_booth
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = election.2.a
+			country_event = {
+				id = election.3
+				days = 10
+			}
+            add_popularity = {
+                ideology = social_liberal
+                popularity = 0.05
+            }
+
+
+		focus_unlock = yes
+		hidden_effect = {
+		set_country_flag = JAP_general_election_is_over_bgd
+		set_country_flag = JAP_ldp_roselia_won_flag
+			set_temp_variable = {
+				var = JAP_election_approval_rating_kdp_var_temp #立宪民主党
+				value = -0.20
+			}
+			JAP_add_election_approval_rating_kdp = yes
+			add_popularity = {
+				ideology = social_liberal
+				popularity = -0.20
+			}
+			add_popularity = {
+				ideology = fascist
+				popularity = -1
+			}
+			add_popularity = {
+				ideology = national_socialist
+				popularity = -1
+			}
+		}
+	}
+}
+country_event = {
+	# 人民联合解散
+	id = election.3
+	title = election.3.t
+	desc = election.3.d
+	picture = GFX_JAP_yukio_edano_cc
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_party_name = {
+				ideology = libertarian_socialist
+				long_name = JAP_libertarian_socialist_party_long
+				name = JAP_libertarian_socialist_party
+			}
+			set_party_name = {
+				ideology = social_democrat
+				long_name = JAP_LDP_SDP_long
+				name = JAP_LDP_SDP
+			}
+			set_party_name = {
+				ideology = social_liberal
+				long_name = JAP_LDP_CDP_long
+				name = JAP_LDP_CDP
+			}
+			set_party_name = {
+				ideology = market_liberal
+				long_name = JAP_LDP_INO_long
+				name = JAP_LDP_INO
+			}
+		}
+	}
+	option = {
+		name = election.3.a
+		clr_country_flag = JAP_civil_coalition_formed
+		country_event = {
+			id = election.5
+			days = 10
+		}
+	}
+}
+country_event = {
+	# 人民联合成立
+	id = election.4
+	title = election.4.t
+	desc = election.4.d
+	picture = GFX_JAP_Civil_Coalition
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = election.4.a
+		JAP_form_united_coalition = yes
+		hidden_effect = {
+			set_party_name = {
+				ideology = libertarian_socialist
+				long_name = JAP_civil_coalition_party_long
+				name = JAP_civil_coalition_party
+			}
+			set_party_name = {
+				ideology = social_democrat
+				long_name = JAP_LDP_SDP_CC_long
+				name = JAP_LDP_SDP_CC
+			}
+			set_party_name = {
+				ideology = social_liberal
+				long_name = JAP_LDP_CDP_CC_long
+				name = JAP_LDP_CDP_CC
+			}
+			set_party_name = {
+				ideology = market_liberal
+				long_name = JAP_LDP_INO_CC_long
+				name = JAP_LDP_INO_CC
+			}
+		}
+	}
+}
+country_event = {
+	# Pastel*Palettes崛起
+	id = election.5
+	title = election.5.t
+	desc = election.5.d
+	picture = GFX_JAP_Civil_Coalition
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = election.5.a
+		custom_effect_tooltip = election.5_tt
+		hidden_effect = {
+			retire_character = JAP_zhiwei_char
+			add_country_leader_role = {
+       	     character = JAP_shirasagi_chisato_char
+        	    promote_leader = yes
+				country_leader = {
+					ideology = eurocommunism
+				}
+       		}
+        	meta_effect = {
+        	    text = {
+        	        generate_character = {
+                        token_base = eve
+                        name = "若宫伊芙"
+        	            gender = male
+        	            nationality = jap
+                        portraits = {
+                            civilian = {
+                                large = "gfx\leaders\JAP\generals\JAP_wakamiya eve.png"
+                                small = "gfx\leaders\JAP\generals\JAP_wakamiya eve.png"
+                            }
+                        }
+        	            allowed_civil_war = { is_ai = no }
+        	            corps_commander = {
+                            traits = {
+								hidden_sympathies
+								infantry_leader
+								infantry_expert
+								media_personality
+								JAP_samurai_lineage
+								trait_zealous_nationalist
+								logistics_wizard
+								bearer_of_artillery
+								inspirational_leader
+								cavalry_expert
+								cavalry_leader
+                            }
+                            skill = 4
+                            attack_skill = 6
+                            defense_skill = 1
+                            planning_skill = 2
+                            logistics_skill = 1
+                        }
+                    }
+                }
+            }
+		}
+	}
+}
+country_event = {
+	# 准备军事化
+	id = roselia.1
+	title = roselia.1.t
+	desc = roselia.1.d
+	picture = GFX_JAP_type102
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = roselia.1.a
+		focus_unlock = yes
+		hidden_effect = {
+		set_country_flag = JAP_preparing_for_militarization
+		}
+	}
+}
+country_event = {
+	# 太约崛起！！
+	id = pdto.0
+	title = pdto.0.t
+	desc = pdto.0.d
+	picture = GFX_JAP_pdto_form
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			create_faction = PDTO
+			set_faction_leader = yes
+			set_country_flag = pdto_member
+			JAP = {
+				add_to_faction = AST
+			}
+			AST = {
+				set_country_flag = pdto_member
+			}
+		}
+	}
+	option = {
+		name = pdto.0.a
+		effect_tooltip = {
+			create_faction = PDTO
+			JAP = {
+				add_to_faction = AST
+			}
+		}
+	}
+}
+country_event = {
+	id = pdto.1
+	title = pdto.1.t
+	desc = pdto.1.d
+	picture = GFX_JAP_adelaide
+	immediate = {
+	}
+	is_triggered_only = yes
+	option = {
+		name = pdto.1.a
+		custom_effect_tooltip = pdto.1_tt
+	}
+}
+country_event = {
+	id = pdto.2
+	title = pdto.2.t
+	desc = pdto.2.d
+	picture = GFX_JAP_the_end
+	immediate = {
+	}
+	is_triggered_only = yes
+	option = {
+		name = pdto.2.a
+	}
+}
+country_event = {
+	# 介入台海战争
+	id = pdto.3
+	title = pdto.3.t
+	desc = pdto.3.d
+	picture = GFX_JAP_alive
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			add_ideas = PDO_taiwan_intervention_idea
+			activate_mission = JAP_taiwan_war_mission
+			if = {
+				limit = {
+					tag = JAP
+				}
+				set_country_flag = JAP_taiwan_war
+				hidden_effect = {
+					load_focus_tree = TFR_taihai_JAP
+				}
+			}
+			JAP = {
+				add_to_faction = CHI
+			}
+			CHI = {
+				set_country_flag = pdto_member
+			}
+		}
+	}
+	option = {
+		name = pdto.3.a
+		set_country_flag = JAP_ongoing_taiwan_war
+		hidden_effect = {
+			country_event = {
+				id = pdto.4
+				days = 3
+			}
+		}
+		effect_tooltip = {
+			add_ideas = PDO_taiwan_idea
+			activate_mission = JAP_taiwan_war_mission
+			if = {
+				limit = {
+					tag = JAP
+				}
+				set_country_flag = JAP_taiwan_war
+				hidden_effect = {
+					load_focus_tree = TFR_taihai_JAP
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = AST
+				}
+				country_event = {
+					id = Australia.0
+					days = 40
+				}
+			}
+			JAP = {
+				add_to_faction = CHI
+			}
+		}
+	}
+}
+country_event = {
+	# 选择谁来
+	id = roselia.2
+	title = roselia.2.t
+	desc = roselia.2.d
+	picture = GFX_JAP_taiwan
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = roselia.2.a
+		complete_national_focus = Jap_mzl_scheme
+		set_country_flag = JAP_taiwan_selection_completed
+		set_country_flag = Jap_mzl_putsch
+		focus_unlock = yes
+	}
+	option = {
+		name = roselia.2.b
+		complete_national_focus = Jap_chuchu_scheme
+		set_country_flag = JAP_taiwan_selection_completed
+		set_country_flag = Jap_chuchu_putsch
+		focus_unlock = yes
+	}
+}
+country_event = {
+	id = pdto.4
+	title = pdto.4.t
+	desc = pdto.4.d
+	picture = GFX_JAP_selfdefenceflag
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	immediate = {
+		hidden_effect = {
+			add_ideas = insufficient_understanding_of_modern_warfare_idea
+		}
+	}
+	option = {
+		name = pdto.4.a
+		effect_tooltip = {
+			add_ideas = insufficient_understanding_of_modern_warfare_idea
+		}
+			hidden_effect = {
+			AST = {
+				add_ideas = insufficient_understanding_of_modern_warfare_idea
+			}
+			CHI = {
+				add_ideas = CHI_insufficient_understanding_of_modern_warfare_idea
+			}
+		}
+	}
+}
+country_event = {
+	# 直接在台南刷兵我就不信上不去岛
+	id = fucktaiwan.0
+	title = fucktaiwan.0.t
+	desc = fucktaiwan.0.d
+	picture = GFX_PRC_navy_ship
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = fucktaiwan.0.a
+		JAP = {
+			add_days_mission_timeout = {
+				mission = JAP_taiwan_war_mission
+				days = 40
+			}
+		}
+		hidden_effect = {
+		PRC = {
+			load_oob = fuck_son_of_bitch_taiwan
+			transfer_state = 1150
+			transfer_state = 1451
+			add_timed_idea = {
+				idea = PRC_fuck_son_of_bitch_taiwan
+				days = 4
+			}
+		}
+			if = {
+				limit = {
+					has_war_with = PRC
+				}
+				PRC = {
+					add_days_mission_timeout = {
+						mission = PRC_taiwan_war_countdown
+						days = 40
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+	# 停止这场该死的闹剧
+	id = fucktaiwan.1
+	title = fucktaiwan.1.t
+	desc = fucktaiwan.1.d
+	picture = GFX_JAP_peace_protests
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = fucktaiwan.1.a
+		custom_effect_tooltip = fucktaiwan.1_tt
+		add_political_power = -100
+		war_support_factor = -10
+		add_timed_idea = {
+			idea = JAP_stop_the_damn_war
+			days = 60
+		}
+		add_popularity = {
+			ideology = communist
+			popularity = 0.10
+		}
+		add_days_mission_timeout = {
+			mission = JAP_taiwan_war_mission
+			days = 100
+		}
+		hidden_effect = {
+			PRC = {
+				add_days_mission_timeout = {
+					mission = PRC_taiwan_war_countdown
+					days = 100
+				}
+			}
+			CHI = {
+				add_days_mission_timeout = {
+					mission = CHI_taiwan_war_mission
+					days = 100
+				}
+			}
+		}
+	}
+}
+country_event = {
+	# 占位符
+	id = bgd.0
+	title = bgd.0.t
+	desc = bgd.0.d
+	picture = GFX_JAP_the_end
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.0.a
+	}
+}
+country_event = {
+	# 输麻咯
+	id = bgd.1
+	title = bgd.1.t
+	desc = bgd.1.d
+	picture = GFX_JAP_the_end
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.1.a
+		focus_unlock = yes
+		hidden_effect = {
+			set_country_flag = JAP_be_defeated
+			clr_country_flag = JAP_ongoing_taiwan_war
+		}
+	}
+}
+country_event = {
+	# 赢！
+	id = bgd.2
+	title = bgd.2.t
+	desc = bgd.2.d
+	picture = GFX_jap_jsdf
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.2.a
+		focus_unlock = yes
+		hidden_effect = {
+			set_country_flag = JAP_be_victory
+			clr_country_flag = JAP_ongoing_taiwan_war
+		}
+	}
+}
