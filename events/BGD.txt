@@ -312,7 +312,8 @@ country_event = {
 								offensive_doctrine
 								aggressive_assaulter
 								inspirational_leader
-								
+								trait_eager_learner
+								commander_in_chief
         	                }
         	                skill = 2
         	                attack_skill = 6
@@ -323,6 +324,41 @@ country_event = {
          	        }
           	    }
            	}
+        	meta_effect = {
+        	    text = {
+        	        generate_character = {
+                        token_base = rin
+                        name = "白金磷子"
+        	            gender = male
+        	            nationality = jap
+                        portraits = {
+                            civilian = {
+                                large = "gfx\leaders\JAP\generals\JAP_shirokane_rinko eve.png"
+                                small = "gfx\leaders\JAP\generals\JAP_shirokane_rinko eve.png"
+                            }
+                        }
+        	            allowed_civil_war = { is_ai = no }
+        	            corps_commander = {
+                            traits = {
+								air_force_connections
+								skilled_staffer
+								adaptable
+								thorough_planner
+								aggressive_assaulter
+								organizer
+								fast_planner
+								brilliant_strategist
+								trait_eager_learner
+                            }
+                            skill = 4
+                            attack_skill = 6
+                            defense_skill = 2
+                            planning_skill = 8
+                            logistics_skill = 5
+                        }
+                    }
+                }
+            }
 		}
 	}
 }
@@ -634,8 +670,8 @@ country_event = {
         	            nationality = jap
                         portraits = {
                             civilian = {
-                                large = "gfx\leaders\JAP\generals\JAP_wakamiya eve.png"
-                                small = "gfx\leaders\JAP\generals\JAP_wakamiya eve.png"
+                                large = "gfx\leaders\JAP\generals\JAP_wakamiya_eve.png"
+                                small = "gfx\leaders\JAP\generals\JAP_wakamiya_eve.png"
                             }
                         }
         	            allowed_civil_war = { is_ai = no }
