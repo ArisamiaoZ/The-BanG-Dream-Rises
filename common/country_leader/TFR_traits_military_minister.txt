@@ -17,7 +17,7 @@ leader_traits = {
 	#Defense Minister
 	directed_by_hideo_kojima = {
 		sprite = 14
-		land_doctrine_cost_factor = -0.1
+		cat_old_land_doctrine_cost_factor = -0.1
 		war_support_factor = 0.05
 		political_power_gain = -0.05
 		ai_will_do = {
@@ -44,7 +44,7 @@ leader_traits = {
 	}
 	military_theorist = {
 		sprite = 14
-		land_doctrine_cost_factor = -0.1
+		cat_old_land_doctrine_cost_factor = -0.1
 		ai_will_do = {
 			factor = 1
 		}
@@ -102,7 +102,7 @@ leader_traits = {
 	}
 	theorist_guerilla_warfare_expert = {
 		sprite = 14
-		land_doctrine_cost_factor = -0.05
+		cat_old_land_doctrine_cost_factor = -0.05
 		army_core_attack_factor = 0.1
 		army_core_defence_factor = 0.1
 		ai_will_do = {
@@ -111,7 +111,7 @@ leader_traits = {
 	}
 	air_warfare_theorist = {
 		sprite = 14
-		air_doctrine_cost_factor = -0.1
+		cat_old_air_doctrine_cost_factor = -0.1
 		ai_will_do = {
 			factor = 1
 		}
@@ -124,7 +124,7 @@ leader_traits = {
 				air_ground_attack = 0.1
 			}
 		}
-		air_doctrine_cost_factor = -0.1
+		cat_old_air_doctrine_cost_factor = -0.1
 		ai_will_do = {
 			factor = 1
 		}
@@ -152,7 +152,7 @@ leader_traits = {
 	}
 	naval_theorist = {
 		sprite = 14
-		naval_doctrine_cost_factor = -0.1
+		cat_old_naval_doctrine_cost_factor = -0.1
 		ai_will_do = {
 			factor = 1
 		}

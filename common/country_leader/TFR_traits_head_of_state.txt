@@ -601,6 +601,72 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	hos_fit_as_a_fiddle_nss = {
+		random = no
+		stability_factor = -0.05
+		political_power_gain = -0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	hos_crisp_as_lettuce_nss = {
+		random = no
+		political_power_gain = -0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	hos_fuzzy_around_the_edges_nss = {
+		random = no
+		stability_factor = 0.025
+		political_power_gain = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	hos_foggy_as_a_mirror_nss = {
+		random = no
+		stability_factor = 0.05
+		political_power_gain = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	hos_lights_on_nobody_home_nss = {
+		stability_factor = 0.075
+		political_power_gain = 0.15
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	hos_present_as_last_years_calendar_nss = {
+		stability_factor = 0.1
+		political_power_gain = 0.2
+		hidden_modifier = {
+			resistance_growth = 0.125
+		}
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	hos_blank_nss = {
+		random = no
+		stability_factor = 0.125
+		political_power_gain = 0.25
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	hos_locked_in_nss = {
+		random = no
+		stability_factor = 0.15
+		political_power_gain = 0.3
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	hos_voice_of_the_free_world = {
 		random = no
 		ai_focus_aggressive_factor = 1
@@ -2093,6 +2159,13 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	hos_pied_piper = {
+		random = no
+		political_power_factor = 0.25
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	hos_insane_kleptocrat = {
 		random = no
 		stability_factor = -0.15
@@ -2552,30 +2625,9 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	hos_azure_dragon_rider = {
+	hos_reiwa = {
 		random = no
-		political_power_gain = 0.1
 		stability_factor = 0.1
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	hos_vase = {
-		random = no
-		political_power_gain = 0.1
-		stability_factor = 0.2
-		society_development_monthly = 0.01
-		expense_growth_factor = -0.05
-		head_minister_cost_factor = -0.2
-		foreign_minister_cost_factor = -0.2
-		economic_minister_cost_factor = -0.2
-		interior_minister_cost_factor = -0.2
-		intelligence_minister_cost_factor = -0.2
-		theorist_minister_cost_factor = -0.2
-		economy_cost_factor = -0.2
-		trade_laws_cost_factor = -0.2
-		interest_rate_laws_cost_factor = -0.2
-		tax_laws_cost_factor = -0.2
 		ai_will_do = {
 			factor = 1
 		}
@@ -3382,12 +3434,6 @@ leader_traits = {
 		conscription_factor = 0.025
 		monthly_population = 0.05
 		production_factory_max_efficiency_factor = 0.1
-	}
-	hos_vose_1 = {
-		random = no
-		stability_factor = 0.05
-		political_power_gain = 0.05
-		expense_growth_factor = -0.05 
 	}
 	#GER
 	GER_hos_government_agenda = {
